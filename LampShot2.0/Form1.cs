@@ -12,15 +12,29 @@ namespace LampShot2._0
 {
     public partial class Form1 : Form
     {
-        Game game = new Game();
+        //Texture
+        public Bitmap lampst = Properties.Resources.LampStandart;
+        public Bitmap wood = Properties.Resources.ShelfWood;
+        public PictureBox[] shelf = new PictureBox[3];
+        Logic logic = new Logic();
         public Form1()
         {
             InitializeComponent();
+            for (int a = 0; a<shelf.Length; a++)
+            {
+                shelf[a] = new PictureBox();
+            }
         }
 
         private void play_but_Click(object sender, EventArgs e)
         {
-            game.GameStart(this);
+            logic.GameStart(this);
+            play_but.Visible = false;
+        }
+
+        private void RefreshTimer_Tick(object sender, EventArgs e)
+        {
+            logic.Refresh();
         }
     }
 }

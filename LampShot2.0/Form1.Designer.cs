@@ -56,6 +56,11 @@
             // 
             this.FrameUpdate.Interval = 15;
             // 
+            // RefreshTimer
+            // 
+            this.RefreshTimer.Interval = 5000;
+            this.RefreshTimer.Tick += new System.EventHandler(this.RefreshTimer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -72,7 +77,7 @@
         #endregion
 
         private System.Windows.Forms.Button play_but;
-        public System.Windows.Forms.Timer FrameUpdate;
+        private System.Windows.Forms.Timer FrameUpdate;
         public System.Windows.Forms.Timer RefreshTimer;
     }
 }

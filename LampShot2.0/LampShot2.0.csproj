@@ -46,13 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Drawing.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Game.cs" />
+    <Compile Include="Logic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -66,6 +67,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -81,7 +83,40 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Textures.bmp" />
+    <None Include="Resources\Healthn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Healthy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LampStandart %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LampStandartBroke %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LampStandartLight %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play %281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShelfWood %281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShelfWood %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Health — копия.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HealthBroke — копия.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\But_Lvl.png" />
@@ -102,52 +137,25 @@
     <None Include="Resources\HealthBroke.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Healthn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Healthy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\LampStandart %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\LampStandart.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\LampStandartBroke %281%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LampStandartBroke.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\LampStandartLight %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\LampStandartLight.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Play %281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Play %281%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Play.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ShelfWood %281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ShelfWood %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\ShelfWood.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Start%281%29.png" />
+    <None Include="Resources\Start.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Start.png" />
+    <None Include="Resources\Textures.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
