@@ -8,7 +8,7 @@ namespace LampShot2._0
 {
     class Logic
     {
-        int cols = 1;
+        int cols = 1, coll = 2, num = 15;
         Drawing drawing = new Drawing();
         Form1 frm;
         public void GameStart(Form1 f)
@@ -19,7 +19,14 @@ namespace LampShot2._0
         }
         public void Refresh()
         {
-            drawing.DrawAll(cols);
+            if (coll < 15)
+                coll++;
+            if ((coll % 5 == 0) && (coll != 15))
+            {
+                cols++;
+            }
+
+            drawing.DrawAll(cols, num, coll);
         }
     }
 }

@@ -16,13 +16,20 @@ namespace LampShot2._0
         public Bitmap lampst = Properties.Resources.LampStandart;
         public Bitmap wood = Properties.Resources.ShelfWood;
         public PictureBox[] shelf = new PictureBox[3];
+        public PictureBox[] lamps = new PictureBox[15];
         Logic logic = new Logic();
         public Form1()
         {
             InitializeComponent();
-            for (int a = 0; a<shelf.Length; a++)
+            for (int a = 0; a<15; a++)
             {
-                shelf[a] = new PictureBox();
+                if (a < 3)
+                {
+                    shelf[a] = new PictureBox();
+                    shelf[a].SizeMode = PictureBoxSizeMode.Zoom;
+                }
+                lamps[a] = new PictureBox();
+                lamps[a].SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
 

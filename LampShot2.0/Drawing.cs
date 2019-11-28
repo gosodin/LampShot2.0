@@ -15,15 +15,27 @@ namespace LampShot2._0
         {
             frm = f;
         }
-        public void DrawAll(int cols)
+        public void DrawAll(int cols, int num, int coll)
         {
             DrawShelf(cols);
-            DrawLamp();
+            DrawLamp(coll, num, cols);
             DrawHealth();
         }
-        public void DrawLamp()
+        public void DrawLamp(int coll, int num,int cols)
         {
-            
+            for (int a = 0, y = 0, s = 0; a < coll; a++)
+            {
+                if (y == 5 && s < cols)
+                {
+                    y = 0;
+                    s++;
+                }
+                y++;
+                frm.Controls.Add(frm.lamps[a]);
+                frm.lamps[a].Size = new Size(frm.Size.Height / 6, frm.Size.Height / 6);
+                frm.lamps[a].Location = new Point((frm.shelf[s].Location.X + frm.shelf[s].Size.Width / coll * a) + (frm.shelf[s].Size.Width / coll / 2) - (frm.lamps[a].Size.Width / 2), frm.shelf[s].Location.Y - frm.lamps[a].Size.Height + 1);
+                frm.lamps[a].Image = frm.lampst;
+            }
         }
         public void DrawShelf(int cols)
         {
