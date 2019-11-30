@@ -25,3 +25,12 @@ C:\Users\v.dmitrij\Source\Repos\gosodin\LampShot2.0\LampShot2.0\obj\Debug\LampSh
 C:\Users\v.dmitrij\Source\Repos\gosodin\LampShot2.0\LampShot2.0\obj\Debug\LampShot2._0.Form1.resources
 C:\Users\v.dmitrij\Source\Repos\gosodin\LampShot2.0\LampShot2.0\obj\Debug\LampShot2._0.Properties.Resources.resources
 C:\Users\v.dmitrij\Source\Repos\gosodin\LampShot2.0\LampShot2.0\obj\Debug\LampShot2.0.csproj.GenerateResource.Cache
+C:\Users\vikto\Source\Repos\gosodin\LampShot2.0\LampShot2.0\bin\Debug\LampShot2.0.exe.config
+C:\Users\vikto\Source\Repos\gosodin\LampShot2.0\LampShot2.0\bin\Debug\LampShot2.0.exe
+C:\Users\vikto\Source\Repos\gosodin\LampShot2.0\LampShot2.0\bin\Debug\LampShot2.0.pdb
+C:\Users\vikto\Source\Repos\gosodin\LampShot2.0\LampShot2.0\obj\Debug\LampShot2.0.csprojAssemblyReference.cache
+C:\Users\vikto\Source\Repos\gosodin\LampShot2.0\LampShot2.0\obj\Debug\LampShot2._0.Form1.resources
+C:\Users\vikto\Source\Repos\gosodin\LampShot2.0\LampShot2.0\obj\Debug\LampShot2._0.Properties.Resources.resources
+C:\Users\vikto\Source\Repos\gosodin\LampShot2.0\LampShot2.0\obj\Debug\LampShot2.0.csproj.GenerateResource.cache
+C:\Users\vikto\Source\Repos\gosodin\LampShot2.0\LampShot2.0\obj\Debug\LampShot2.0.exe
+C:\Users\vikto\Source\Repos\gosodin\LampShot2.0\LampShot2.0\obj\Debug\LampShot2.0.pdb

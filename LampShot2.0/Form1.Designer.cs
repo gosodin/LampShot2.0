@@ -33,6 +33,7 @@
             this.play_but = new System.Windows.Forms.Button();
             this.FrameUpdate = new System.Windows.Forms.Timer(this.components);
             this.RefreshTimer = new System.Windows.Forms.Timer(this.components);
+            this.scorelab = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // play_but
@@ -61,16 +62,30 @@
             this.RefreshTimer.Interval = 5000;
             this.RefreshTimer.Tick += new System.EventHandler(this.RefreshTimer_Tick);
             // 
+            // scorelab
+            // 
+            this.scorelab.AutoSize = true;
+            this.scorelab.Dock = System.Windows.Forms.DockStyle.Right;
+            this.scorelab.Font = new System.Drawing.Font("Modern No. 20", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scorelab.Location = new System.Drawing.Point(1203, 0);
+            this.scorelab.Name = "scorelab";
+            this.scorelab.Size = new System.Drawing.Size(61, 69);
+            this.scorelab.TabIndex = 1;
+            this.scorelab.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.scorelab);
             this.Controls.Add(this.play_but);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Resize += new System.EventHandler(this.Form1_Resize);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -79,6 +94,7 @@
         private System.Windows.Forms.Button play_but;
         private System.Windows.Forms.Timer FrameUpdate;
         public System.Windows.Forms.Timer RefreshTimer;
+        public System.Windows.Forms.Label scorelab;
     }
 }
 

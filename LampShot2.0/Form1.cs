@@ -14,6 +14,8 @@ namespace LampShot2._0
     {
         //Texture
         public Bitmap lampst = Properties.Resources.LampStandart;
+        public Bitmap lampstb = Properties.Resources.LampStandartBroke;
+        public Bitmap lampstl = Properties.Resources.LampStandartLight;
         public Bitmap wood = Properties.Resources.ShelfWood;
         public PictureBox[] shelf = new PictureBox[3];
         public PictureBox[] lamps = new PictureBox[15];
@@ -30,7 +32,13 @@ namespace LampShot2._0
                 }
                 lamps[a] = new PictureBox();
                 lamps[a].SizeMode = PictureBoxSizeMode.Zoom;
+                lamps[a].Click += new EventHandler(Lamps_Click);
             }
+        }
+
+        private void Lamps_Click(object sender, EventArgs e)
+        {
+            logic.LampClick(sender);
         }
 
         private void play_but_Click(object sender, EventArgs e)
@@ -42,6 +50,12 @@ namespace LampShot2._0
         private void RefreshTimer_Tick(object sender, EventArgs e)
         {
             logic.Refresh();
+        }
+
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            logic.Resize();
         }
     }
 }
