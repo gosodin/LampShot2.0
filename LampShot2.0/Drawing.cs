@@ -23,19 +23,19 @@ namespace LampShot2._0
         }
         public void DrawLamp(int coll, int num, int cols)
         {
-            for (int a = 0, y = 0, s = 0; a < coll; a++)
+            for (int a = 0, y = 4, s = 0; a < coll; a++)
             {
-                if (y == 6 && s < cols)
+                if (a == y && a < 15)
                 {
-                    y = 0;
+                    y += 5;
                     s++;
                 }
-                y++;
                 frm.Controls.Add(frm.lamps[a]);
                 frm.lamps[a].Size = new Size(frm.Size.Height / 6, frm.Size.Height / 6);
                 //frm.lamps[a].Location = new Point((frm.shelf[s].Location.X + frm.shelf[s].Size.Width / coll * a) + (frm.shelf[s].Size.Width / coll / 2) - (frm.lamps[a].Size.Width / 2), frm.shelf[s].Location.Y - frm.lamps[a].Size.Height + 1);
-                frm.lamps[a].Location = new Point(a * (frm.shelf[s].Location.X + frm.shelf[s].Size.Width / ((coll - (5 * s - 5)) / 2)) + frm.shelf[s].Size.Width / ((coll - (5 * s - 5)) / 2) - frm.lamps[a].Size.Width / 2, frm.shelf[s].Location.Y - frm.lamps[a].Size.Height + 1);
+                frm.lamps[a].Location = new Point(frm.shelf[s].Location.X + (frm.shelf[s].Width / ((coll + 1) - (5 * s))) * ((a + 1) - (5 * s)) - frm.lamps[a].Width / 2, frm.shelf[s].Location.Y - frm.lamps[a].Size.Height + 1);
                 frm.lamps[a].Image = frm.lampst;
+                //frm.shelf[s].Location = new Point (427,0);
                 if (a == num)
                     frm.lamps[a].Image = frm.lampstl;
             }
