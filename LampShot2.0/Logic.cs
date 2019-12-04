@@ -22,9 +22,9 @@ namespace LampShot2._0
         {
             Random rand = new Random();
             num = rand.Next(coll);
-            if (coll < 15)
+            if (coll <= 14)
                 coll++;
-            if ((coll % 5 == 0) && (coll != 15))
+            if ((coll % 6 == 0) && (coll != 15))
             {
                 cols++;
             }
