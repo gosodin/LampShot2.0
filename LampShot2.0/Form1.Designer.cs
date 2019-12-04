@@ -65,11 +65,12 @@
             // scorelab
             // 
             this.scorelab.AutoSize = true;
+            this.scorelab.BackColor = System.Drawing.Color.Transparent;
             this.scorelab.Dock = System.Windows.Forms.DockStyle.Right;
-            this.scorelab.Font = new System.Drawing.Font("Modern No. 20", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scorelab.Location = new System.Drawing.Point(1203, 0);
+            this.scorelab.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scorelab.Location = new System.Drawing.Point(1193, 0);
             this.scorelab.Name = "scorelab";
-            this.scorelab.Size = new System.Drawing.Size(61, 69);
+            this.scorelab.Size = new System.Drawing.Size(71, 76);
             this.scorelab.TabIndex = 1;
             this.scorelab.Text = "0";
             // 

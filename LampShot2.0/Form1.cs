@@ -23,7 +23,7 @@ namespace LampShot2._0
         public Form1()
         {
             InitializeComponent();
-            for (int a = 0; a<15; a++)
+            for (int a = 0; a < 15; a++)
             {
                 if (a < 3)
                 {
