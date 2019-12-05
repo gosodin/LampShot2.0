@@ -29,10 +29,12 @@ namespace LampShot2._0
                 {
                     shelf[a] = new PictureBox();
                     shelf[a].SizeMode = PictureBoxSizeMode.Zoom;
+                    Controls.Add(shelf[a]);
                 }
                 lamps[a] = new PictureBox();
                 lamps[a].SizeMode = PictureBoxSizeMode.Zoom;
                 lamps[a].Click += new EventHandler(Lamps_Click);
+                Controls.Add(lamps[a]);
             }
         }
 
