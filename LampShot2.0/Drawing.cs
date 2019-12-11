@@ -11,7 +11,6 @@ namespace LampShot2._0
     class Drawing
     {
         Form1 frm;
-        int y = 0;
         public void AnimStart(Form1 f)
         {
             frm = f;
@@ -25,15 +24,23 @@ namespace LampShot2._0
         }
         public void DrawLamp(int coll, int num, int cols)
         {
-            for (int a = 0,s = 0; a < coll; a++)
+            for (int a = 0, s = 0, col = 0; a < coll; a++)
             {
                 if (a % 5 == 0 && a != 0)
                     s++;
+                col = coll;
+                if ((coll > 5 && a < 5) || (coll > 9 && a < 10))
+                    col = 5;
+                if (a > 4 && coll < 10)
+                    col = coll - 5;
+                if (a > 9)
+                    col = coll - 10;
                 frm.lamps[a].Size = new Size(frm.Size.Height / 6, frm.Size.Height / 6);
-                frm.lamps[a].Location = new Point(frm.shelf[s].Location.X + frm.shelf[s].Width / (coll + 1 -(s * 5)) * (a + 1 - (s * 5)) - (frm.lamps[a].Width / 2),frm.shelf[s].Location.Y - frm.lamps[a].Height);
+                frm.lamps[a].Location = new Point(frm.shelf[s].Location.X + frm.shelf[s].Width / (col + 1) * (a + 1 - s * 5) - (frm.lamps[a].Width / 2), frm.shelf[s].Location.Y - frm.lamps[a].Height);
                 frm.lamps[a].Image = frm.lampst;
                 if (a == num)
                     frm.lamps[a].Image = frm.lampstl;
+                frm.lamps[a].Visible = true;
             }
         }
         public void DrawShelf(int cols)
@@ -44,6 +51,7 @@ namespace LampShot2._0
                 frm.shelf[a].Size = new Size(Convert.ToInt32(frm.Size.Width / 1.4), frm.Size.Height / 9);
                 frm.shelf[a].SizeMode = PictureBoxSizeMode.StretchImage;
                 frm.shelf[a].Location = new Point(frm.Size.Width / 2 - frm.shelf[a].Size.Width / 2, frm.Size.Height - frm.shelf[a].Size.Height * 3 / 2 * (a + a + 1));
+                frm.shelf[a].Visible = true;
             }
         }
         public void DrawHealth()

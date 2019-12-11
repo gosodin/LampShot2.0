@@ -56,6 +56,7 @@
     <Compile Include="Logic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +157,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Textures.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Space.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spring.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Summer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Autumn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sett.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
