@@ -18,8 +18,11 @@ namespace LampShot2._0
         public Bitmap lampstb = Properties.Resources.LampStandartBroke;
         public Bitmap lampstl = Properties.Resources.LampStandartLight;
         public Bitmap wood = Properties.Resources.ShelfWood;
+        public Bitmap healthY = Properties.Resources.Health;
+        public Bitmap healthN = Properties.Resources.HealthBroke;
         public PictureBox[] shelf = new PictureBox[3];
         public PictureBox[] lamps = new PictureBox[15];
+        public PictureBox[] healths = new PictureBox[3];
         //Game
         Settings settings = new Settings();
         Logic logic = new Logic();
@@ -30,6 +33,11 @@ namespace LampShot2._0
             {
                 if (a < 3)
                 {
+                    healths[a] = new PictureBox();
+                    healths[a].BackColor = Color.Transparent;
+                    healths[a].SizeMode = PictureBoxSizeMode.Zoom;
+                    healths[a].Visible = false;
+                    Controls.Add(healths[a]);
                     shelf[a] = new PictureBox();
                     shelf[a].BackColor = Color.Transparent;
                     shelf[a].SizeMode = PictureBoxSizeMode.Zoom;

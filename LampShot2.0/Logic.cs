@@ -9,7 +9,7 @@ namespace LampShot2._0
 {
     class Logic
     {
-        int cols = 1, coll = 2, num = 15, score = 0;
+        int cols = 1, coll = 2, num = 15, score = 0,health = 3;
         Drawing drawing = new Drawing();
         Form1 frm;
         private bool scoreStop = false;
@@ -19,6 +19,7 @@ namespace LampShot2._0
         {
             frm = f;
             frm.BackgroundImage = frm.BGround;
+            frm.Cursor = Cursors.Cross;
             GameStarted = true;
             frm.RefreshTimer.Enabled = true;
             drawing.AnimStart(frm);
@@ -36,7 +37,10 @@ namespace LampShot2._0
             {
                 cols++;
             }
-
+            if (num != 15)
+                health--;
+            if (health == 0)
+                GameStop();
             drawing.DrawAll(cols, num, coll);
         }
         public void LampClick(object sender)
@@ -54,6 +58,10 @@ namespace LampShot2._0
         {
             if (GameStarted)
                 drawing.DrawAll(cols, num, coll);
+        }
+        public void GameStop()
+        {
+            
         }
     }
 }

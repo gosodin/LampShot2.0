@@ -79,14 +79,12 @@
             // 
             // Ok
             // 
-            this.Ok.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Ok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Ok.BackgroundImage = global::LampShot2._0.Properties.Resources.Ok;
             this.Ok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Ok.FlatAppearance.BorderSize = 0;
             this.Ok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ok.Location = new System.Drawing.Point(588, 479);
+            this.Ok.Location = new System.Drawing.Point(587, 504);
             this.Ok.Name = "Ok";
             this.Ok.Size = new System.Drawing.Size(116, 131);
             this.Ok.TabIndex = 6;
@@ -101,9 +99,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BG.BackColor = System.Drawing.Color.Silver;
             this.BG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BG.Location = new System.Drawing.Point(439, 131);
+            this.BG.Location = new System.Drawing.Point(447, 153);
             this.BG.Name = "BG";
-            this.BG.Size = new System.Drawing.Size(411, 227);
+            this.BG.Size = new System.Drawing.Size(400, 225);
             this.BG.TabIndex = 5;
             this.BG.TabStop = false;
             this.BG.Visible = false;
@@ -117,9 +115,9 @@
             this.Sett.BackColor = System.Drawing.Color.Transparent;
             this.Sett.BackgroundImage = global::LampShot2._0.Properties.Resources.Sett;
             this.Sett.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Sett.Location = new System.Drawing.Point(397, 69);
+            this.Sett.Location = new System.Drawing.Point(357, 69);
             this.Sett.Name = "Sett";
-            this.Sett.Size = new System.Drawing.Size(500, 600);
+            this.Sett.Size = new System.Drawing.Size(600, 600);
             this.Sett.TabIndex = 4;
             this.Sett.TabStop = false;
             this.Sett.Visible = false;
@@ -168,6 +166,7 @@
             this.Controls.Add(this.SetBut);
             this.Controls.Add(this.scorelab);
             this.Controls.Add(this.play_but);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "Form1";
             this.Text = "Form1";
             this.TransparencyKey = System.Drawing.SystemColors.ActiveBorder;

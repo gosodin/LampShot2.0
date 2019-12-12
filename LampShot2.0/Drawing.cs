@@ -56,7 +56,16 @@ namespace LampShot2._0
         }
         public void DrawHealth()
         {
-
+            int loc = frm.Width / 10;
+            int y = loc;
+            for (int a = 0; a < 3; a++)
+            {
+                frm.healths[a].Image = frm.healthY;
+                frm.healths[a].Size = new Size(loc, loc);
+                frm.healths[a].Location = new Point(10, loc / 5 + 2 * (loc * a));
+                y += loc * a;
+                frm.healths[a].Visible = true;
+            }
         }
     }
 }
