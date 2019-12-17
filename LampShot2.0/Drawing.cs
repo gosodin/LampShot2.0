@@ -15,12 +15,12 @@ namespace LampShot2._0
         {
             frm = f;
         }
-        public void DrawAll(int cols, int num, int coll)
+        public void DrawAll(int cols, int num, int coll, int healths)
 
         {
             DrawShelf(cols);
             DrawLamp(coll, num, cols);
-            DrawHealth();
+            DrawHealth(healths);
         }
         public void DrawLamp(int coll, int num, int cols)
         {
@@ -54,13 +54,16 @@ namespace LampShot2._0
                 frm.shelf[a].Visible = true;
             }
         }
-        public void DrawHealth()
+        public void DrawHealth(int healths)
         {
             int loc = frm.Width / 10;
             int y = loc;
             for (int a = 0; a < 3; a++)
             {
+                if (healths>a)
                 frm.healths[a].Image = frm.healthY;
+                else
+                    frm.healths[a].Image = frm.healthN;
                 frm.healths[a].Size = new Size(loc, loc);
                 frm.healths[a].Location = new Point(10, loc / 5 + 2 * (loc * a));
                 y += loc * a;

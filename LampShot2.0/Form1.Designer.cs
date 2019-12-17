@@ -79,16 +79,19 @@
             // 
             // Ok
             // 
-            this.Ok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Ok.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Ok.AutoSize = true;
+            this.Ok.BackColor = System.Drawing.Color.White;
             this.Ok.BackgroundImage = global::LampShot2._0.Properties.Resources.Ok;
             this.Ok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Ok.FlatAppearance.BorderSize = 0;
             this.Ok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ok.Location = new System.Drawing.Point(587, 504);
+            this.Ok.Location = new System.Drawing.Point(576, 457);
             this.Ok.Name = "Ok";
-            this.Ok.Size = new System.Drawing.Size(116, 131);
+            this.Ok.Size = new System.Drawing.Size(165, 153);
             this.Ok.TabIndex = 6;
-            this.Ok.UseVisualStyleBackColor = true;
+            this.Ok.UseVisualStyleBackColor = false;
             this.Ok.Visible = false;
             this.Ok.Click += new System.EventHandler(this.Ok_Click);
             // 
@@ -99,7 +102,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BG.BackColor = System.Drawing.Color.Silver;
             this.BG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BG.Location = new System.Drawing.Point(447, 153);
+            this.BG.Location = new System.Drawing.Point(453, 159);
             this.BG.Name = "BG";
             this.BG.Size = new System.Drawing.Size(400, 225);
             this.BG.TabIndex = 5;
@@ -115,9 +118,9 @@
             this.Sett.BackColor = System.Drawing.Color.Transparent;
             this.Sett.BackgroundImage = global::LampShot2._0.Properties.Resources.Sett;
             this.Sett.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Sett.Location = new System.Drawing.Point(357, 69);
+            this.Sett.Location = new System.Drawing.Point(348, 51);
             this.Sett.Name = "Sett";
-            this.Sett.Size = new System.Drawing.Size(600, 600);
+            this.Sett.Size = new System.Drawing.Size(600, 618);
             this.Sett.TabIndex = 4;
             this.Sett.TabStop = false;
             this.Sett.Visible = false;
@@ -179,16 +182,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button play_but;
         private System.Windows.Forms.Timer FrameUpdate;
         public System.Windows.Forms.Timer RefreshTimer;
         public System.Windows.Forms.Label scorelab;
-        private System.Windows.Forms.Button SetBut;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.PictureBox Sett;
         public System.Windows.Forms.PictureBox BG;
         public System.Windows.Forms.Button Ok;
+        public System.Windows.Forms.Button SetBut;
+        public System.Windows.Forms.Button play_but;
+        public System.Windows.Forms.Label label1;
     }
 }
 
