@@ -21,6 +21,8 @@ namespace LampShot2._0
             frm = f;
             frm.BackgroundImage = frm.BGround;
             frm.Cursor = Cursors.Cross;
+            frm.RefreshTimer.Interval = 1000;
+            scoreStop = true;
             GameStarted = true;
             frm.RefreshTimer.Enabled = true;
             drawing.AnimStart(frm);
@@ -29,7 +31,7 @@ namespace LampShot2._0
         }
         public void Refresh()
         {
-            if (frm.RefreshTimer.Interval > 600)
+            if (frm.RefreshTimer.Interval != 1000)
                 frm.RefreshTimer.Interval -= 100;
             Random rand = new Random();
             if (coll <= 14)
