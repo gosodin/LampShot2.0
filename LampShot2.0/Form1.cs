@@ -26,9 +26,12 @@ namespace LampShot2._0
         //Game
         Settings settings = new Settings();
         Logic logic = new Logic();
+        //Facts
+        string[] facts = new string[20]; 
         public Form1()
         {
             InitializeComponent();
+            facts[0] = "«Столетняя лампочка» или «лампочка из Ливермора», как прозвали ее в народе, горит непрерывно на малой мощности (4 Bаттa), в глубоком недокале, при очень низком КПД. Первоначально она использовалась для ночного освещения и пару раз меняла место расположения. Последний раз в 1976 году, для чего она выключалась на 22 минуты.";
             for (int a = 0; a < 15; a++)
             {
                 if (a < 3)
@@ -95,6 +98,21 @@ namespace LampShot2._0
         private void SetBut_Click(object sender, EventArgs e)
         {
             settings.Open(this);
+        }
+        public void Facts()
+        {
+            Random r = new Random();
+            //int a = r.Next(20);
+            int a = 0;
+            fact.Text = facts[a];
+            KnowYou.Visible = true;
+            fact.Visible = true;
+            Sett.Visible = true;
+        }
+
+        private void fact_Resize(object sender, EventArgs e)
+        {
+            fact.Font = new Font(fact.Font.FontFamily, Width / 60, fact.Font.Style);
         }
     }
 }

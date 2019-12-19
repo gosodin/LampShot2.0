@@ -39,11 +39,10 @@
             this.Sett = new System.Windows.Forms.PictureBox();
             this.SetBut = new System.Windows.Forms.Button();
             this.play_but = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.fact = new System.Windows.Forms.TextBox();
+            this.KnowYou = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sett)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // FrameUpdate
@@ -72,7 +71,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("beer money", 150F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 150F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(260, 9);
             this.label1.Name = "label1";
@@ -159,28 +158,41 @@
             this.play_but.UseVisualStyleBackColor = false;
             this.play_but.Click += new System.EventHandler(this.play_but_Click);
             // 
-            // pictureBox1
+            // fact
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.fact.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::LampShot2._0.Properties.Resources.Sett;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(348, 51);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(600, 618);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.fact.BackColor = System.Drawing.Color.White;
+            this.fact.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.fact.Cursor = System.Windows.Forms.Cursors.Default;
+            this.fact.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.fact.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.fact.Location = new System.Drawing.Point(407, 208);
+            this.fact.Multiline = true;
+            this.fact.Name = "fact";
+            this.fact.Size = new System.Drawing.Size(478, 400);
+            this.fact.TabIndex = 50;
+            this.fact.Text = resources.GetString("fact.Text");
+            this.fact.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.fact.Visible = false;
+            this.fact.Resize += new System.EventHandler(this.fact_Resize);
             // 
-            // label2
+            // KnowYou
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(534, 283);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "label2";
+            this.KnowYou.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.KnowYou.AutoSize = true;
+            this.KnowYou.BackColor = System.Drawing.Color.White;
+            this.KnowYou.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.KnowYou.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.KnowYou.Location = new System.Drawing.Point(394, 120);
+            this.KnowYou.Name = "KnowYou";
+            this.KnowYou.Size = new System.Drawing.Size(506, 73);
+            this.KnowYou.TabIndex = 51;
+            this.KnowYou.Text = "А знали ли вы?";
+            this.KnowYou.Visible = false;
             // 
             // Form1
             // 
@@ -188,8 +200,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.KnowYou);
+            this.Controls.Add(this.fact);
             this.Controls.Add(this.Ok);
             this.Controls.Add(this.BG);
             this.Controls.Add(this.Sett);
@@ -204,7 +216,6 @@
             this.Resize += new System.EventHandler(this.Form1_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.BG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sett)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,8 +231,8 @@
         public System.Windows.Forms.Button SetBut;
         public System.Windows.Forms.Button play_but;
         public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox fact;
+        private System.Windows.Forms.Label KnowYou;
     }
 }
 

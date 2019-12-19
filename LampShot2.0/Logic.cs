@@ -21,7 +21,7 @@ namespace LampShot2._0
             frm = f;
             frm.BackgroundImage = frm.BGround;
             frm.Cursor = Cursors.Cross;
-            frm.RefreshTimer.Interval = 1000;
+            frm.RefreshTimer.Interval = 5000;
             scoreStop = true;
             GameStarted = true;
             frm.RefreshTimer.Enabled = true;
@@ -92,6 +92,7 @@ namespace LampShot2._0
             frm.play_but.Visible = true;
             frm.SetBut.Visible = true;
             frm.label1.Visible = true;
+            frm.Facts();
         }
     }
 }
